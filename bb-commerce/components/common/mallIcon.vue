@@ -81,6 +81,7 @@ export default {
     right: 0;
     bottom: 0;
     margin: auto; 
+    z-index: 50;
     padding-left:0.6rem;
 }
 .box img{

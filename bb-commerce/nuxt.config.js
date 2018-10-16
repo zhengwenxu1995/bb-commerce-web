@@ -27,6 +27,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/css/iconfont.css'
   ],
 
   /*
@@ -34,6 +35,7 @@ module.exports = {
   */
   plugins: [
     '~/css/reset.css'
+    
   ],
 
   /*

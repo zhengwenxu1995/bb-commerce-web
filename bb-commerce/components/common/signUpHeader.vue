@@ -60,9 +60,9 @@ export default {
 }
 .title{
     color: #f40;
-    font-size: 0.3rem;
+    font-size: 0.35rem;
     font-weight: 600;
-    margin-top: 0.2rem;
-    font-family: "Arial","Microsoft YaHei","黑体","宋体";
+    margin-top: 0.1rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 </style>

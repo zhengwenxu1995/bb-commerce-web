@@ -1,12 +1,13 @@
 <template>
   <div class="page-frame">
     <mall-header></mall-header>
-    <search-product></search-product>
-    <mall-nav></mall-nav>
     <div class="page-cont">
       <div class="header">
-        <h1 @click="login" style="font-size:1rem;">登录</h1>
-        <h1 @click="register" style="font-size:1rem;">注册</h1>
+        <h1>hhahah</h1>
+        <nuxt-link :to="'/login'">登录</nuxt-link>
+        <h1 @click="login">登录</h1>
+        <h1 @click="register">注册</h1>
+
       </div>
     </div>
     <side-nav></side-nav>
@@ -20,8 +21,6 @@ import mallFooter from "~/components/common/mallFooter"
 import mallHeader from "~/components/common/mallHeader"
 import mallIcon from "~/components/common/mallIcon"
 import sideNav from "~/components/common/sideNav.vue"
-import searchProduct from "~/components/common/searchProduct.vue"
-import mallNav from "~/components/common/mallNav.vue"
 export default {
   data() {
     return {
@@ -32,9 +31,7 @@ export default {
     mallFooter,
     mallHeader,
     mallIcon,
-    sideNav,
-    searchProduct,
-    mallNav
+    sideNav
   },
   methods:{
     login(){
@@ -53,10 +50,10 @@ export default {
 <style scoped>
 .page-frame{
   width: 100%;
-  min-width: 26rem;
+  min-width: 1400px;
 }
 .page-cont{
-  width: 24rem;
+  width: 1300px;
   margin: 0 auto;
   background: #f00;
 }
