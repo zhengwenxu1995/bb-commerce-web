@@ -18,7 +18,7 @@
       },
       fontSizeMax: {
         type: Number,
-        default: 40
+        default: 35
       },
       backgroundColorMin: {
         type: Number,
@@ -58,7 +58,7 @@
       },
       contentHeight: {
         type: Number,
-        default: 38
+        default: 30
       }
     },
     methods: {

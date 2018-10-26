@@ -22,7 +22,7 @@
                                 <button class="loginBtn" @click="userLogin">登录</button>
                             </div>
                             <div class="other-frame">
-                                <nuxt-link to="/" class="forget-pass" title="忘记密码">忘记密码？</nuxt-link>
+                                <nuxt-link to="/forgetPassword" class="forget-pass" title="忘记密码">忘记密码？</nuxt-link>
                                 <nuxt-link to="/register" title="免费注册">免费注册</nuxt-link>
                             </div>
                         </div>

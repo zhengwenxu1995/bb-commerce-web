@@ -21,21 +21,24 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#f40' },
 
   /*
   ** Global CSS
   */
   css: [
-    '~/css/iconfont.css'
+    '~/css/iconfont.css',
+    
+    { src: "swiper/dist/css/swiper.css" }
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/css/reset.css'
-    
+    '~/css/reset.css',
+    { src: "~/plugins/vue-swiper.js", ssr: false },
+    { src: "~/plugins/vee-validate.js", ssr: true }
   ],
 
   /*
