@@ -13,7 +13,7 @@
                         </div>
                         <div class="login-frame-cont">
                             <div class="input-frame" title="输入用户名">
-                                <i class="iconfont user">&#xe604;</i><input class="userCode" placeholder="会员名/账号" v-model="userOption.userCode" type="text">
+                                <i class="iconfont user">&#xe604;</i><input class="userCode" placeholder="会员名/邮箱" v-model="userOption.userCode" type="text">
                             </div>
                             <div class="pass-frame" title="输入密码">
                                 <i class="iconfont password">&#xe640;</i><input class="passwordCode" placeholder="密码" v-model="userOption.passwordCode" type="password">

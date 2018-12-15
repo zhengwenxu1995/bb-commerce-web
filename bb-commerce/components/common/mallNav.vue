@@ -5,7 +5,7 @@
                 <div class="mall-sort-cont" @click="showNavMenu">
                 <i class="iconfont menu-item">&#xe609;</i>商城分类
                 </div>
-                <div class="mall-sort-list" v-if="option.showNavMenuItem">
+                <div class="mall-sort-list" v-if="showNavMenuItem">
                     <ul class="mall-sort-list-cont">
                         <li class="sort-menu-cont"
                         @mouseover="option.sortMenuItemIndex=index"
@@ -40,9 +40,11 @@
             </div>
             <ul class="mall-menu">
                 <li class="menu-itme"
-                :class="{'select':option.selectIndex==index}"
+                :class="{'select':nowShowMenuItem==index}"
                 v-for="(item,index) of option.navMenuItem"
-                :key="index"><nuxt-link :to="item.path">{{item.menuName}}</nuxt-link></li>
+                :key="index"
+                @click="setShowMenu(index)"
+                ><nuxt-link :to="item.path">{{item.menuName}}</nuxt-link></li>
             </ul>
         </div>
     </div>
@@ -53,8 +55,6 @@ export default {
     data(){
         return {
             option:{
-                selectIndex:0,
-                showNavMenuItem:true,
                 navMenuItem:[
                     {path:"",menuName:"首页"},
                     {path:"",menuName:"每日推荐"},
@@ -222,9 +222,19 @@ export default {
         }
     },
     props:{
-        
+        showNavMenuItem:{
+            Type:Boolean,
+            default:true
+        },
+        nowShowMenuItem:{
+            Type:Boolean,
+            default:0
+        }
     },
     methods:{
+        setShowMenu(index){
+            this.$emit("changeShowMenu",index)
+        },
         sort(menuName){
             console.log("您点击了"+menuName)
         },
@@ -235,7 +245,7 @@ export default {
             console.log("您点击了"+grSonMenuName);
         },
         showNavMenu(){
-            this.option.showNavMenuItem=!this.option.showNavMenuItem;
+            this.showNavMenuItem=!this.showNavMenuItem;
         }
     }
 }

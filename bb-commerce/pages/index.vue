@@ -164,6 +164,13 @@
     <side-nav></side-nav>
     <mall-icon></mall-icon>
     <mall-footer></mall-footer>
+    <msg-box
+    :showMsg="showMsg"
+    v-on:closeMsg="closeMsg">
+      <div slot="msg-cont">提示内容！</div>
+      <button slot="fun-btn" class="confirm"
+      @click="confirm">确定</button>
+    </msg-box>
   </div>
 </template>
 
@@ -175,9 +182,11 @@ import mallIcon from "~/components/common/mallIcon"
 import sideNav from "~/components/common/sideNav.vue"
 import searchProduct from "~/components/common/searchProduct.vue"
 import mallNav from "~/components/common/mallNav.vue"
+import msgBox from "~/components/common/msgBox.vue"
 export default {
   data() {
     return {
+      showMsg:true,
       snatchIconShow:-1,
       lifeReList:[
         {title:"囤货小当家",popNumber:"920720",imgPath:require("~/static/image/life1.png")},
@@ -233,9 +242,16 @@ export default {
     mallIcon,
     sideNav,
     searchProduct,
-    mallNav
+    mallNav,
+    msgBox
   },
   methods:{
+    confirm(){
+      this.showMsg=false;
+    },
+    closeMsg(status){
+      this.showMsg=status;
+    },
     login(){
       this.$router.push({path:"/login"});
     },
@@ -250,6 +266,17 @@ export default {
 </script>
 
 <style scoped>
+.confirm{
+  line-height: 0.7rem;
+  padding: 0 0.4rem;
+  background: #fff;
+  color: #ccc;
+  border: 0.01rem solid #ccc;
+  border-radius: 0.1rem;
+}
+.confirm:hover{
+  color:#333;
+}
 /* 猜你喜欢 */
 .guess-love-goods-info .guess-love-goods-info-word{
   padding-left: 0;

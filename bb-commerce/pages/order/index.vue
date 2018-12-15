@@ -2,13 +2,7 @@
   <div class="page-frame">
     <mall-header></mall-header>
     <div class="page-cont">
-      <div class="header">
-        <h1>hhahah</h1>
-        <nuxt-link :to="'/login'">登录</nuxt-link>
-        <h1 @click="login">登录</h1>
-        <h1 @click="register">注册</h1>
-
-      </div>
+      
     </div>
     <side-nav></side-nav>
     <mall-icon></mall-icon>
@@ -24,7 +18,7 @@ import sideNav from "~/components/common/sideNav.vue"
 export default {
   data() {
     return {
-
+      
     }
   },
   components: {
@@ -39,7 +33,10 @@ export default {
     },
     register(){
       this.$router.push({path:"/register"});
-    }
+    },
+    relatShowItem(index){
+        this.showGoodsRelat=index;
+      }
   },
   computed:{
 

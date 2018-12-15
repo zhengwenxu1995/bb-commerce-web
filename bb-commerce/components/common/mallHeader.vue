@@ -19,7 +19,7 @@
                 <li class="my-data" v-if="option.loginStatus"><nuxt-link to="">我的资料</nuxt-link></li>
             </ul>
             <ul class="user-menu">
-                <li class="menu-item" v-if="option.backIndex"><nuxt-link to="">商城首页</nuxt-link></li>
+                <li class="menu-item" v-if="option.backIndex"><nuxt-link to="/" style="line-height: 0.7rem;">商城首页</nuxt-link></li>
                 <li class="menu-item order" @click="order" @mouseover="option.carShopShow=true" @mouseout="option.carShopShow=false">我的订单<i class="iconfont" style="color:rgb(150,150,150)">&#xe733;</i>
                     <div class="order-list" v-if="option.carShopShow">
                         <h2 style="color:#333;font-weight:600;">最近完成的订单:</h2>
@@ -244,9 +244,9 @@ export default {
         backHome(){
             let url= this.$route.path;
             if(url=="/"){
-                this.backIndex=false;
+                this.option.backIndex=false;
             }else{
-                this.backIndex=true;
+                this.option.backIndex=true;
             }
         },
         //添加到书签
@@ -281,7 +281,6 @@ export default {
     },
     mounted(){
         this.backHome();
-        console.log(this.$route.path)
     }
 }
 </script>
@@ -473,7 +472,7 @@ export default {
 .mall-header-frame{
     width: 100%;
     min-width: 26rem;
-    height: 0.7rem;
+    height: 0.72rem;
     background: #F5F5F5;
     border-bottom:0.02rem solid #ccc;
 }

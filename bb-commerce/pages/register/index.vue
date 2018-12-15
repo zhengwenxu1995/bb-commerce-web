@@ -418,10 +418,10 @@ p{
     font-size: 0.32rem;
     color: #ccc;
     cursor: pointer;
-    transition: ease all 0.5s;
+    transition: all 0.8s ease;
 }
 .close:hover{
-    transform: rotate(90deg)
+    transform: rotate(90deg);
 }
 .pact{
     position: absolute;

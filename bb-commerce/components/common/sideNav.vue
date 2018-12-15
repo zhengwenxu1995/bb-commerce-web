@@ -86,7 +86,7 @@ export default {
     top: -2rem;
     padding-bottom: 0.2rem;
     text-align: center;
-    z-index: 99;
+    z-index: 3000;
     background: #fff;
 }
 .qr-code img{
@@ -160,7 +160,7 @@ export default {
     border-top: 0.1rem solid transparent;
     border-bottom: 0.1rem solid transparent;
     border-right: 0.1rem solid transparent;
-    z-index: 100;
+    z-index: 3000;
 }
 .leave-msg{
     position: absolute;
@@ -169,7 +169,7 @@ export default {
     padding: 0.2rem 0;
     width: 2rem;
     text-align: center;
-    z-index: 99;
+    z-index: 3000;
     background: #434343;
     color: #fff;
 }
@@ -197,7 +197,9 @@ export default {
     padding-top: 0.1rem;
 }
 .menu-bottom li{
-    margin-bottom:0.3rem;
+    cursor: pointer;
+    /* margin-bottom:0.3rem; */
+    margin-bottom: 40%;
     padding: 0.2rem 0;
     width: 0.7rem;
     text-align:center;
@@ -208,7 +210,8 @@ export default {
     background: #C40000;
 }
 .menu-bottom{
-    margin-top: 3rem;
+    position: absolute;
+    bottom: 8%;
 }
 .side-frame{
     width: 0.7rem;
@@ -219,9 +222,14 @@ export default {
     top: 0;
     right: 0;
 }
+.meun-top{
+    position: absolute;
+    top: 20%;
+}
 .meun-top li{
     position: relative;
-    margin-bottom:0.3rem; 
+    /* margin-bottom:0.3rem;  */
+    margin-bottom: 50%;
 }
 .side-cont{
     width: 0.7rem;
